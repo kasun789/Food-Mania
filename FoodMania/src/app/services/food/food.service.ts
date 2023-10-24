@@ -11,47 +11,47 @@ export class FoodService {
       return [
         {
           id:1,
-          name:'Chocolot Ice Cream',
+          name:'Chocolate Ice Cream',
           price:20,
           cookTime:'20:30',
           favorite:true,
           origins:['Ice Cream','Italy'],
           stars:4.7,
-          imageUrl:'assets/images/foods/food-1.jpg',
+          imageUrl:'assets/images/foods/food-8.jpg',
           tags: ['Ice-Cream', 'Desart']
       },
       {
         id:2,
-        name:'Chocolot Ice Cream',
+        name:'Pizza',
         price:20,
         cookTime:'20:30',
         favorite:true,
-        origins:['Ice Cream','Italy'],
+        origins:['Pizza','Italy'],
         stars:4.7,
         imageUrl:'assets/images/foods/food-2.jpg',
-        tags: ['Ice-Cream', 'Desart']
+        tags: ['Pizza', 'Main Dish']
     },
     {
       id:3,
-      name:'Chocolot Ice Cream',
+      name:'Sandwitch',
       price:20,
       cookTime:'20:30',
       favorite:true,
-      origins:['Ice Cream','Italy'],
+      origins:['Sandwitch','American'],
       stars:4.7,
-      imageUrl:'assets/images/foods/food-3.jpg',
-      tags: ['Ice-Cream', 'Desart']
+      imageUrl:'assets/images/foods/food-10.jpg',
+      tags: ['Sandwitch', 'Main-Dish']
   },
   {
     id:4,
-    name:'Chocolot Ice Cream',
+    name:'Cheese Pasta',
     price:20,
     cookTime:'20:30',
     favorite:true,
-    origins:['Ice Cream','Italy'],
+    origins:['Cheese Pasta','Italy'],
     stars:4.7,
     imageUrl:'assets/images/foods/food-4.jpg',
-    tags: ['Ice-Cream', 'Desart']
+    tags: ['cheese-pasta', 'Main-Food']
 },
 {
   id:5,
@@ -66,14 +66,14 @@ export class FoodService {
 },
 {
   id:6,
-  name:'Chocolot Ice Cream',
+  name:'Salad',
   price:20,
   cookTime:'20:30',
   favorite:true,
-  origins:['Ice Cream','Italy'],
+  origins:['Salad','Italy'],
   stars:4.7,
-  imageUrl:'assets/images/foods/food-6.jpg',
-  tags: ['Ice-Cream', 'Desart']
+  imageUrl:'assets/images/foods/food-7.jpg',
+  tags: ['Salad', 'Desart']
 },
         
       ]

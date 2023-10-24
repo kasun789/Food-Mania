@@ -1,15 +1,16 @@
 header{
-    background: white;
+    background: #FF4301;
     padding: 0;
     border-bottom: 1px solid #e72929;
+    height: 69px;
 }
 
 a{
-    color: #af1313;
+    color: white;
 }
 
 a:hover{
-    background: #e72929;
+
     color: white;
 }
 
@@ -20,16 +21,35 @@ a:hover{
 }
 
 a.logo{
-    font-weight: bold;
-    padding: 1em;
+    font-weight: 800;
+  font-size: 30px;
+  padding: 12px;
 }
 
 nav ul{
     list-style-type: none;
     margin: 0;
+    margin-top: 32px;
+}
+
+nav ul li{
+    padding: 1em;
+    display: inline-block;
+    margin-top: -86px;
 }
 
 nav ul li a{
     padding: 1em;
     display: inline-block;
+}
+
+.logo-main{
+    width: 100px;
+    height: 100px;
+}
+
+.phone-icon{
+    color: white;
+    font-size: 27px;
+    margin-bottom: 9px;
 }

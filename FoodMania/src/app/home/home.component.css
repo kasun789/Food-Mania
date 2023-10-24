@@ -5,6 +5,7 @@ ul{
     flex-wrap: wrap;
     list-style-type: none;
     padding: 0;
+    margin-top: 10px;
 }
 
 ul li a {
@@ -16,10 +17,54 @@ ul li a {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    color: #e72929;
+    color: black;
 }
 
 li a:hover{
     opacity: 0.9;
     cursor: pointer;
+}
+
+.name{
+    position: relative;
+    display: flex;
+    justify-content: center;  /* align horizontally */
+    align-items: center;      /* align vertically */
+    font-weight: 800;
+}
+
+.tags{
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-time{
+    margin-top: 39px;
+    margin-left: 14px;
+}
+
+.meal-price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+}
+
+.add-to-cart{
+    padding: 10px;
+    border-radius: 15px;
+    background: #af1313;
+    color: white;
+    position: relative;
+    left: 32%;
+    top: 79%;
+}
+
+.food-img{
+    width: 316px;
+    height: 239px;
 }
