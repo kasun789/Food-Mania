@@ -9,6 +9,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { FormsModule } from '@angular/forms';
+import { CartComponent } from './cart/cart.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { OrderDetailsComponent } from './order-details/order-details.component';
+import { AdminHeaderComponent } from './admin-header/admin-header.component';
+
 
 @NgModule({
   declarations: [
@@ -16,13 +22,19 @@ import { SignupComponent } from './signup/signup.component';
     HeaderComponent,
     HomeComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    CartComponent,
+    AdminDashboardComponent,
+    OrderDetailsComponent,
+    AdminHeaderComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -367,7 +367,8 @@ button,select {
 }
 
 select {
-  word-wrap: normal
+  word-wrap: normal;
+  width: 200px;
 }
 
 select:disabled {
@@ -13974,21 +13975,21 @@ i.flag-zimbabwe:before,i.flag-zw:before {
 }
 
 .select-input.form-control[readonly]:not([disabled]) {
-  background-color: transparent
+  background-color: transparent;
 }
 
 .form-select {
-  transition: all .2s linear
+  transition: all .2s linear;
 }
 
 .form-select:focus {
   border-color: #3b71ca;
   outline: 0;
-  box-shadow: inset 0 0 0 1px #3b71ca
+  box-shadow: inset 0 0 0 1px #3b71ca;
 }
 
 .form-check {
-  min-height: 1.5rem
+  min-height: 1.5rem;
 }
 
 .form-check-input {
@@ -13996,7 +13997,7 @@ i.flag-zimbabwe:before,i.flag-zw:before {
   width: 1.125rem;
   height: 1.125rem;
   background-color: #fff;
-  border: .125rem solid rgba(0,0,0,.25)
+  border: .125rem solid rgba(0,0,0,.25);
 }
 
 .form-check-input:before {
@@ -19299,3 +19300,78 @@ code[class*=language-],pre[class*=language-] {
       padding-left:0
   }
 }
+
+/* dropdown.component.css */
+
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.custom-dropdown select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.custom-dropdown select:focus {
+  outline: none;
+  border-color: #007bff; /* Change the color on focus */
+}
+
+.custom-dropdown select:hover {
+  border-color: #007bff; /* Change the color on hover */
+}
+
+/* Style the arrow */
+.custom-dropdown select::after {
+  content: '\25BC'; /* Unicode character for a down arrow */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Style the options */
+.custom-dropdown select option {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Style the dropdown when it's open */
+.custom-dropdown select[aria-expanded="true"] {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Add transition for a smoother effect */
+.custom-dropdown select {
+  transition: border-color 0.3s ease;
+}
+
+INPUT:not(:-webkit-autofill), SELECT:not(:-webkit-autofill), TEXTAREA:not(:-webkit-autofill) {
+  animation-name: onautofillcancel;
+}
+
+input[type="text" i] {
+  writing-mode: horizontal-tb !important;
+  padding-block: 1px;
+  padding-inline: 2px;
+}
+
+
+.form-outline .form-control.form-control-lg.active~.form-label,
+.form-outline .form-control.form-control-lg:focus~.form-label {
+  transform: translateY(-1.25rem) scale(0.8);
+  transform-origin: left top; /* Adjust the origin based on your layout */
+}
+
+

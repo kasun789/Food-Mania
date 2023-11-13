@@ -1,5 +1,6 @@
+<app-header></app-header>
 <ul>
-    <li *ngFor="let food of foods">
+    <li *ngFor="let food of foods" [routerLink]="['/order',food.id,3001]">
         <a>
             <img src="{{food.imageUrl}}" alt="" class="food-img">
             <div class="content">
@@ -20,7 +21,7 @@
                     </div>
                 </div>
                 <div class="order-btn">
-                    <Button variant="contained" class="add-to-cart">
+                    <Button variant="contained" class="add-to-cart" [routerLink]="['/admin',1]">
                         ADD TO CART
                       </Button>
                 </div>
