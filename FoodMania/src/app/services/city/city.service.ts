@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { City } from 'src/app/shared/models/City';
 
 @Injectable({
@@ -7,8 +8,8 @@ import { City } from 'src/app/shared/models/City';
 export class CityService {
 
   constructor() { }
-  getAll():City[]{
-    return [
+  getAll():Observable<City[]>{
+    const cities: City[] = [
       {
         id:1,
         name:"Akkaraipattu"
@@ -278,5 +279,7 @@ export class CityService {
         name:"Weligama"
       }
     ]
+
+    return of(cities)
   }
 }

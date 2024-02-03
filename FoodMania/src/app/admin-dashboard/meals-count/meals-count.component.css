@@ -1,0 +1,47 @@
+.meal-count-div{
+    background-image: url('../../../assets/images/icons/userAgent.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-position: center;
+}
+
+.meal-count-main-div{
+    height: 200px;
+    margin-top: -140px;
+}
+
+.meal-count{
+    font-size: 40px;
+    font-weight: 800;
+    margin-left: 45%;
+    margin-top: 10px;
+}
+
+.meal-description{
+    margin-left: 46.1%;
+    margin-top: 13px;
+}
+
+.meal-img-div{
+    margin-left: 45%;
+    position: relative;
+    border: 2px solid red;
+}
+
+/* Change the color of the progress bar */
+.mat-progress-bar {
+    background-color: rgb(249, 249, 249);
+    margin-top: 20px;
+  }
+
+.mt-mdc-progress-bar.mat-accent{
+    --mdc-line-progress-active-indicator-color: blue ;
+}
+  
+  /* Change the color of the progress bar line */
+  .mat-progress-bar::after {
+    background-color: blue;
+  }
+
+::ng-deep  .mdc-linear-progress__bar-inner{
+    border-color: red !important;
+  }

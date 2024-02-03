@@ -1,0 +1,25 @@
+.side-bar{
+    left: 294px;
+    width: 583px;
+    top: 27px;
+}
+
+.item{
+    display: inline-flex;
+    align-content: center;
+    color: black;
+}
+
+.item li{
+    display: inline;
+    padding-right: 10px;
+    font-weight: 800;
+}
+
+.delivery-agent{
+    width: 150px;
+}
+
+
+
+

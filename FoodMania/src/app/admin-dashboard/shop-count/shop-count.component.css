@@ -1,0 +1,42 @@
+.shop-count-div{
+    background-image: url('../../../assets/images/icons/resturent1.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-position: center;
+    
+}
+
+
+.shops-main-div{
+    height: 200px; 
+}
+
+.shop-img-div{
+    position: relative;
+    margin-left: 41%;
+    border: 2px solid red;
+}
+
+.shop-count-no{
+    font-size: 40px;
+    font-weight: 800;
+    margin-left: 36%;
+    margin-top: 10px;
+}
+
+.shop-description{
+    margin-left: 42.1%;
+    margin-top: 13px;
+  
+}
+
+/* Change the color of the progress bar */
+.mat-progress-bar {
+    background-color: rgb(249, 249, 249);
+    margin-top: 20px;
+  }
+  
+  /* Change the color of the progress bar line */
+  .mat-progress-bar-fill::after {
+    background-color: blue;
+  }
+

@@ -1,0 +1,39 @@
+.user-count-div{
+    /* background: #2ec8eb; */
+    background-image: url('../../../assets/images/icons/mealUsers.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-position: center;
+
+}
+
+.user-main-div{
+    height: 200px;
+}
+
+.logo-user{
+    margin-left: 45%;
+    position: relative;
+    border: 2px solid red;
+}
+
+.user-count-no{
+    font-size: 40px;
+    font-weight: 800;
+    margin-left: 39%;
+    margin-top: 10px;
+}
+
+.user-description{
+    margin-left: 44%;
+    margin-top: 13px;
+}
+/* Change the color of the progress bar */
+.mat-progress-bar {
+    background-color: rgb(249, 249, 249);
+    margin-top: 20px;
+  }
+  
+  /* Change the color of the progress bar line */
+  .mat-progress-bar-fill::after {
+    background-color: blue;
+  }

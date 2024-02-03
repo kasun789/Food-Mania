@@ -9,12 +9,23 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { FormsModule } from '@angular/forms';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CartComponent } from './cart/cart.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
-import { AdminHeaderComponent } from './admin-header/admin-header.component';
-
+import { AdminHeaderComponent } from '../app/admin-dashboard/admin-header/admin-header.component';
+import { AdminNavBarComponent } from './admin-dashboard/admin-nav-bar/admin-nav-bar.component';
+import { AdminChartComponent } from './admin-dashboard/admin-chart/admin-chart.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+import { UsersCountComponent } from './admin-dashboard/users-count/users-count.component';
+import { ShopCountComponent } from './admin-dashboard/shop-count/shop-count.component';
+import { MealsCountComponent } from './admin-dashboard/meals-count/meals-count.component';
+import { DeliverAgentCountComponent } from './admin-dashboard/deliver-agent-count/deliver-agent-count.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { DropdownModule } from 'primeng/dropdown';
+import { StoreModule } from '@ngrx/store';
+import { signupReducer } from './signup/store/reducers/signup.reducer'; // Import your signup reducer
 
 @NgModule({
   declarations: [
@@ -27,16 +38,29 @@ import { AdminHeaderComponent } from './admin-header/admin-header.component';
     AdminDashboardComponent,
     OrderDetailsComponent,
     AdminHeaderComponent,
-
+    AdminNavBarComponent,
+    AdminChartComponent,
+    UsersCountComponent,
+    ShopCountComponent,
+    MealsCountComponent,
+    DeliverAgentCountComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    NgApexchartsModule,
+    CanvasJSAngularChartsModule,
+    MatProgressBarModule,
+    ReactiveFormsModule,
+    DropdownModule,
+    StoreModule.forRoot({
+      signup: signupReducer, // Use your signup reducer here
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

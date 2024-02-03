@@ -1,0 +1,50 @@
+.item1{
+    grid-area: navbar;
+}
+.item2{
+    grid-area: navbar;
+}
+.item3{
+    grid-area: sidebar;
+}
+
+.item4{
+    grid-area: left;
+}
+
+.item5{
+    grid-area: right;
+}
+
+.item6{
+    grid-area: meals;
+}
+
+.item7{
+    grid-area: agents;
+}
+
+.admin-container{
+    display: grid;
+    grid-template-areas: 'header header header header header header'
+    'navbar navbar navbar navbar navbar navbar'
+    'sidebar sidebar left left right right'
+    'sidebar sidebar meals meals agents agents';
+    gap: 10px;
+    /* background-color: #2196F3; */
+    padding: 10px;
+}
+
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+
+.logo-img{
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
