@@ -19,7 +19,7 @@ const userSchema = Schema({
   },
   city: {
     type: String,
-    required: true,
+    required: false,
   },
   email: {
     type: String,

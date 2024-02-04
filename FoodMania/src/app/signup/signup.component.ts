@@ -9,9 +9,9 @@ import { City } from '../shared/models/City';
 import { CityService } from '../services/city/city.service';
 import { SubSink } from 'subsink';
 import { AbstractControl, FormBuilder, FormGroup } from '@angular/forms';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { UserDetailsVM } from '../shared/models/user.details.vm';
-import { Store } from '@ngrx/store';
+import { Store, select } from '@ngrx/store';
 import { registration, registrationSuccess } from '../signup/store/actions/signup.action';
 
 @Component({
@@ -190,5 +190,6 @@ export class SignupComponent implements OnInit, OnChanges, OnDestroy {
     console.log(user);
     
     this.store.dispatch(registration({ user })); 
+
   }
 }

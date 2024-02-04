@@ -26,6 +26,10 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { DropdownModule } from 'primeng/dropdown';
 import { StoreModule } from '@ngrx/store';
 import { signupReducer } from './signup/store/reducers/signup.reducer'; // Import your signup reducer
+import { EffectsModule } from '@ngrx/effects';
+import { SignupEffects } from './signup/store/effects/signup.effects';
+import { userService } from './services/user.service';
+import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -48,6 +52,7 @@ import { signupReducer } from './signup/store/reducers/signup.reducer'; // Impor
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     MatButtonModule,
     MatIconModule,
     FormsModule,
@@ -59,8 +64,9 @@ import { signupReducer } from './signup/store/reducers/signup.reducer'; // Impor
     StoreModule.forRoot({
       signup: signupReducer, // Use your signup reducer here
     }),
+    EffectsModule.forRoot([SignupEffects]),
   ],
-  providers: [],
+  providers: [userService, HttpClient],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

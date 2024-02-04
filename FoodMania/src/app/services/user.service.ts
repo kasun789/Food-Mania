@@ -10,7 +10,8 @@ export class userService {
   registerUser(user: UserDetailsVM): Observable<any> {
     console.log(user);
     
-    return this.http.post(`${this.url}/api/user/register`, user);
+    return this.http.post(`http://localhost:3000/api/user/register
+    `, user);
   }
 
   constructor(private http: HttpClient) {}
