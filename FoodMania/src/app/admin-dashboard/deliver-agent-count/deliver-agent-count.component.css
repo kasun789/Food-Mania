@@ -1,0 +1,39 @@
+.deliver-agent-count-div{
+    background-image: url('../../../assets/images/icons/delivaryMan.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-position: center;
+}
+
+.Deliver-agent-main-div{
+    height: 200px;
+    margin-top: -140px;
+}
+
+.deliver-agent-div{
+    margin-left: 45%;
+    position: relative;
+    border: 2px solid red;
+}
+
+.delivery-agent-description{
+    margin-left: 38.1%;
+    margin-top: 13px;
+}
+
+.delivery-agent-no{
+    font-size: 40px;
+    font-weight: 800;
+    margin-left: 42%;
+    margin-top: 10px;
+}
+
+/* Change the color of the progress bar */
+.mat-progress-bar {
+    background-color: rgb(249, 249, 249);
+    margin-top: 20px;
+  }
+  
+  /* Change the color of the progress bar line */
+  .mat-progress-bar-fill::after {
+    background-color: blue;
+  }

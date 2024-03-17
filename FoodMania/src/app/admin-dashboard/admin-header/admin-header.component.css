@@ -1,0 +1,32 @@
+.header-inner-interface{
+  background: #c00a27;
+  height: 71px !important;
+  position: relative;
+  left: 0px;
+  width: 100%;
+}
+
+.search-wrapper{
+  position: relative;
+  top: -63px;
+  left: 294px;
+  width: 200px;
+}
+
+.serach-input{
+  width: 200px;
+}
+
+.header-profile{
+  position: relative;
+  top: -106px;
+  left: 1235px;
+  width: 200px;
+
+}
+
+.calendar-btn{
+  position: relative;
+  top: -149px;
+  left: 1453px;
+}

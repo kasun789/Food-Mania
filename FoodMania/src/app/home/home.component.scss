@@ -1,0 +1,158 @@
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+ul li a {
+    height: 25rem;
+    width: 20rem;
+    border: 1px solid whitesmoke;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: black;
+}
+
+li a:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.name{
+    position: relative;
+    display: flex;
+    justify-content: center;  /* align horizontally */
+    align-items: center;      /* align vertically */
+    font-weight: 800;
+}
+
+.tags{
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-time{
+    margin-top: 39px;
+    margin-left: 14px;
+}
+
+.meal-price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+}
+
+.add-to-cart{
+    padding: 10px;
+    border-radius: 15px;
+    background: #c00a27;
+    color: white;
+    position: relative;
+    left: 32%;
+    top: 79%;
+    cursor: pointer;
+}
+
+.food-img{
+    width: 316px;
+    height: 239px;
+}
+
+.main-heading{
+    display: flex;
+    justify-content: center;
+}
+
+.logo-icon{
+    display: flex;
+    justify-self: flex-start;
+}
+.main-frame{
+    display: grid;
+    grid-gap: 50px;
+    height: 434px;
+    background-image: url('../../assets/images/icons/Image.png');
+    background-size: cover; /* Adjust as needed */
+    background-position: center;
+
+    .header{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-gap: 10px;
+    }
+    
+    .button-group-order-signup{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-gap: 8px;  
+    }
+    
+    .btn-order-bg{
+        display: flex;
+        justify-content: right;
+        margin-top: 20px;
+    
+        .order-btn{
+            display: flex;
+            justify-content: flex-end;
+            background-color: white;
+            color: black; 
+        }
+    }
+    
+    .btn-signup-bg{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    
+        .signup-btn{
+            display: flex;
+            justify-content: flex-start;
+            background-color: white;
+            color: black; 
+        }
+    }
+    .sub-heading{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 800;
+        font-size: 45px;
+
+        .main-heading{
+            color: white;
+        }
+    }
+
+    .search-bar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .search-field{
+            padding: 6px;
+            width: 400px;
+        }
+        .search-btn{
+            background: black;
+            border-color: white;
+        }
+    }
+}
+
+
+
+
+

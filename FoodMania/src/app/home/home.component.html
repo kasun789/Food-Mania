@@ -1,30 +1,55 @@
-<ul>
-    <li *ngFor="let food of foods">
+<div class="main-frame">
+    <div class="header">
+        <img src="../../assets/images/icons/F_3_-removebg-preview.png" class="h-20 w-20 logo-icon" alt="" srcset="">
+        <div class="button-group-order-signup">
+            <div class="btn-order-bg">
+                <button nz-button class="order-btn">Order</button>
+            </div>
+            <div class="btn-signup-bg">
+                <button nz-button class="signup-btn">Sign Up</button>
+            </div>
+        </div>
+    </div>
+    <div class="sub-heading">
+        <h1 class="text-center main-heading">Delicious meals delivered to your doorstep!</h1>
+    </div>
+    <div class="search-bar">
+        <form action="">
+            <nz-input-group>
+                <input nz-input placeholder="Search something delicious?" class="search-field" nz-icon="">
+                <button nz-button nzType="primary" class="search-btn">Search</button>
+              </nz-input-group>
+        </form>
+    </div>
+</div>
+<app-site-status></app-site-status>
+<!-- <ul>
+    <li *ngFor="let food of foods" [routerLink]="['/order',food.id,3001]">
         <a>
             <img src="{{food.imageUrl}}" alt="" class="food-img">
             <div class="content">
                 <div class="name">
                     {{food.name}}
                 </div>
- 
+
                 <div class="product-item-footer">
                     <div class="origins" class="tags">
-                        <span *ngFor="let origin of food.origins" >
+                        <span *ngFor="let origin of food.origins">
                             {{origin}}
                             &nbsp;&nbsp;
                         </span>
-                       
+
                     </div>
                     <div class="meal-price">
                         $ {{food.price}}
                     </div>
                 </div>
                 <div class="order-btn">
-                    <Button variant="contained" class="add-to-cart">
+                    <Button variant="contained" class="add-to-cart" [routerLink]="['/admin',1]">
                         ADD TO CART
-                      </Button>
+                    </Button>
                 </div>
             </div>
         </a>
     </li>
-</ul>
+</ul> -->

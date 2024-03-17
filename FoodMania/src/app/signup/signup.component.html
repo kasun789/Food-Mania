@@ -1,0 +1,135 @@
+<section class="h-100 bg-dark">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <div class="card card-registration my-4">
+          <div class="row g-0">
+            <div class="col-xl-6 d-none d-xl-block">
+              <!-- <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                  alt="Sample photo" class="img-fluid"
+                  style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" /> -->
+            </div>
+            <form class="col-xl-6" [formGroup]="userRegistration" (submit)="submitUserData()">
+              <div class="card-body p-md-5 text-black">
+                <h3 class="mb-5 text-uppercase">Customer registration form</h3>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="form3Example1m" class="form-control form-control-lg"
+                        [class.active]="firstName" formControlName="firstName" />
+                      <label class="form-label" for="form3Example1m">First name</label>
+                      <div class="form-notch">
+                        <div class="form-notch-leading" style="width: 9px;"></div>
+                        <div class="form-notch-middle" style="width: 93px;"></div>
+                        <div class="form-notch-trailing"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="form3Example1n" class="form-control form-control-lg"
+                        [class.active]="lastName" formControlName="lastName" />
+                      <label class="form-label" for="form3Example1n">Last name</label>
+                      <div class="form-notch">
+                        <div class="form-notch-leading" style="width: 9px;"></div>
+                        <div class="form-notch-middle" style="width: 93px;"></div>
+                        <div class="form-notch-trailing"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="text" id="form3Example8" class="form-control form-control-lg" [class.active]="address"
+                    formControlName="address" />
+                  <label class="form-label" for="form3Example8">Address</label>
+                  <div class="form-notch">
+                    <div class="form-notch-leading" style="width: 9px;"></div>
+                    <div class="form-notch-middle" style="width: 78px;"></div>
+                    <div class="form-notch-trailing"></div>
+                  </div>
+                </div>
+
+                <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+
+                  <h6 class="mb-0 me-4">Gender: </h6>
+
+                  <div class="form-check form-check-inline mb-0 me-4">
+                    <input class="form-check-input" type="radio" name="female" id="femaleGender" value="option1"
+                      formControlName="female" />
+                    <label class="form-check-label" for="femaleGender">Female</label>
+                  </div>
+
+                  <div class="form-check form-check-inline mb-0 me-4">
+                    <input class="form-check-input" type="radio" name="male" id="maleGender" value="option2"
+                      formControlName="male" />
+                    <label class="form-check-label" for="maleGender">Male</label>
+                  </div>
+
+                  <div class="form-check form-check-inline mb-0">
+                    <input class="form-check-input" type="radio" name="other" id="otherGender" value="option3"
+                      formControlName="other" />
+                    <label class="form-check-label" for="otherGender">Other</label>
+                  </div>
+
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div id="select-wrapper-876101" class="select-wrapper">
+                      <div class="custom-dropdown">
+                        <select class="select" formControlName="city">
+                          <option value="" disabled selected>Select City</option>
+                          <option *ngFor="let option of cities" [value]="option.name">{{ option.name }}</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="email" id="form3Example9" class="form-control form-control-lg" [class.active]="email"
+                    formControlName="email" />
+                  <label class="form-label" for="form3Example9" style="margin-left: 0px;">Email</label>
+                  <div class="form-notch">
+                    <div class="form-notch-leading" style="width: 9px;"></div>
+                    <div class="form-notch-middle" style="width: 68px;"></div>
+                    <div class="form-notch-trailing"></div>
+                  </div>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="password" id="form3Example90" class="form-control form-control-lg"
+                    [class.active]="password" formControlName="password" />
+                  <label class="form-label" for="form3Example90">Passowrd</label>
+                  <div class="form-notch">
+                    <div class="form-notch-leading" style="width: 9px;"></div>
+                    <div class="form-notch-middle" style="width: 90px;"></div>
+                    <div class="form-notch-trailing"></div>
+                  </div>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="password" id="form3Example99" class="form-control form-control-lg"
+                    [class.active]="conformPassword" formControlName="conformPassword" />
+                  <label class="form-label" for="form3Example99">Conform Password</label>
+                  <div class="form-notch">
+                    <div class="form-notch-leading" style="width: 9px;"></div>
+                    <div class="form-notch-middle" style="width: 150px;"></div>
+                    <div class="form-notch-trailing"></div>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-end pt-3">
+                  <button type="button" class="btn btn-light btn-lg"routerLink="/login">Back</button>
+                  <button type="submit" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
