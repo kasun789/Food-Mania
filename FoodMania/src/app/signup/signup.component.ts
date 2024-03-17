@@ -187,9 +187,12 @@ export class SignupComponent implements OnInit, OnChanges, OnDestroy {
       password: this.passwordControl?.value,
       confirmPassword: this.conformPasswordControl?.value,
     };
-    console.log(user);
-    
+
     this.store.dispatch(registration({ user })); 
+
+    const response = registrationSuccess;
+    console.log(response);
+    
 
   }
 }

@@ -1,41 +1,30 @@
-
 <!-- partial:index.partial.html -->
 <div class="signup-page">
 	<div class="left">
-        <img src="../../assets/images/icons/login.jpg" alt="images" class="left-image">
+		<img src="../../assets/images/icons/login.jpg" alt="images" class="left-image">
 	</div>
-	
-	
-		<div class="right">
-		<h5>Login</h5>
-		<p class="right-description">Don't have an account? <a routerLink="/signup">Creat Your Account</a> it takes less than a minute</p>
-		<div class="inputs">
-			<input type="text" placeholder="user name">
-			
-			<br>
-			<input type="password" placeholder="password">
-			
-		</div>
-			
+		<form class="right" [formGroup]="loginForm" (ngSubmit)="submit()">
+			<h5>Login</h5>
+			<p class="right-description">Don't have an account? <a routerLink="/signup">Creat Your Account</a> it takes
+				less than a minute</p>
+			<div class="inputs">
+				<input type="text" placeholder="user name" formControlName="email">
+				<br>
+				<input type="password" placeholder="password" formControlName="password">
+			</div>
 			<br><br>
-			
-		<div class="remember-me--forget-password">
+			<div class="remember-me--forget-password">
 				<!-- Angular -->
-	<label>
-		<input type="checkbox" name="item" checked/>
-		<span class="text-checkbox">Remember me</span>
-	</label>
-			<p>Forget Password?</p>
-		</div>
-			
+				<label>
+					<input type="checkbox" name="item" checked />
+					<span class="text-checkbox">Remember me</span>
+				</label>
+				<p>Forget Password?</p>
+			</div>
 			<br>
-            <ul>
-                <li><button class="back-btn" routerLink="">Back</button></li>
-                <li><button class="login-btn" >Login</button></li>
-                
-            </ul>
-            
-	</div>
-	
+			<ul>
+				<li><button class="back-btn" routerLink="">Back</button></li>
+				<li><button class="login-btn" type="submit">Login</button></li>
+			</ul>
+	</form>
 </div>
-

@@ -5,12 +5,10 @@ import { UserDetailsVM } from '../shared/models/user.details.vm';
 
 @Injectable()
 export class userService {
-  private url = 'http://localhost:3000';
+  private url = 'http://localhost:3000/api';
 
   registerUser(user: UserDetailsVM): Observable<any> {
-    console.log(user);
-    
-    return this.http.post(`http://localhost:3000/api/user/register
+    return this.http.post(`${this.url}/user/register
     `, user);
   }
 

@@ -1,4 +1,6 @@
-const User = require("../models/user")
+const User = require("../models/user");
+const crypto = require("crypto");
+const bcrypt = require("bcrypt");
 /**
  * register user
  * @param {*} req
@@ -6,8 +8,7 @@ const User = require("../models/user")
  * @returns status
  */
 const registerUser = async (req, res) => {
-  console.log(req);
-  const {
+  let {
     firstName,
     lastName,
     address,
@@ -19,10 +20,15 @@ const registerUser = async (req, res) => {
   } = req.body;
 
   try {
-    console.log(password, confirmPassword);
     if (password != confirmPassword) {
       return res.status(400).json({ message: "Password does not match." });
     }
+
+    const saltRound = 10;
+    const salt = await bcrypt.genSalt(saltRound);
+
+    password = await bcrypt.hash(password, salt);
+
     const newUser = new User({
       firstName,
       lastName,

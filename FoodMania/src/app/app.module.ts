@@ -30,6 +30,12 @@ import { EffectsModule } from '@ngrx/effects';
 import { SignupEffects } from './signup/store/effects/signup.effects';
 import { userService } from './services/user.service';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
+import { authReducer } from './login/store/reducers/auth.reducer';
+import { AuthService } from './services/auth.service';
+import { AuthEffects } from './login/store/effects/auth.effects';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzCardModule } from 'ng-zorro-antd/card';
+import { SiteStatusComponent } from './home/site-status/site-status.component';
 
 @NgModule({
   declarations: [
@@ -48,12 +54,15 @@ import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http'
     ShopCountComponent,
     MealsCountComponent,
     DeliverAgentCountComponent,
+    SiteStatusComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    NzButtonModule,
     MatButtonModule,
+    NzCardModule,
     MatIconModule,
     FormsModule,
     NgApexchartsModule,
@@ -63,10 +72,11 @@ import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http'
     DropdownModule,
     StoreModule.forRoot({
       signup: signupReducer, // Use your signup reducer here
+      login: authReducer
     }),
-    EffectsModule.forRoot([SignupEffects]),
+    EffectsModule.forRoot([SignupEffects, AuthEffects]),
   ],
-  providers: [userService, HttpClient],
+  providers: [userService, HttpClient, AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

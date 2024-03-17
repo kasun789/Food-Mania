@@ -1,0 +1,56 @@
+.status-frame{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-gap: 10px;
+    margin-left: 50px;
+    margin-top: 30px;
+
+    .restaurant-status{
+        .description{
+            font-weight: 800;
+        }
+        .restaurant-logo{
+            margin-left: 31px;
+        }
+        .description-ext{
+            font-size: 10px;
+        }
+    }
+
+    .quality-status{
+        .description{
+            font-weight: 800;
+            margin-left: 24px;
+        }
+        .restaurant-logo{
+            margin-left: 47px;
+        }
+        .description-ext{
+            font-size: 10px;
+        }
+    }
+
+    .deliver-status{
+        .description{
+            font-weight: 800;
+        }
+        .restaurant-logo{
+            margin-left: 28px;
+        }
+        .description-ext{
+            font-size: 10px;
+        }
+    }
+
+    .order-status{
+        .description{
+            font-weight: 800;
+        }
+        .restaurant-logo{
+            margin-left: 36px;
+        }
+        .description-ext{
+            font-size: 10px;
+        }
+    }
+}
