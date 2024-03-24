@@ -17,7 +17,7 @@ import { AdminHeaderComponent } from '../app/admin-dashboard/admin-header/admin-
 import { AdminNavBarComponent } from './admin-dashboard/admin-nav-bar/admin-nav-bar.component';
 import { AdminChartComponent } from './admin-dashboard/admin-chart/admin-chart.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
-import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+// import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { UsersCountComponent } from './admin-dashboard/users-count/users-count.component';
 import { ShopCountComponent } from './admin-dashboard/shop-count/shop-count.component';
 import { MealsCountComponent } from './admin-dashboard/meals-count/meals-count.component';
@@ -36,6 +36,16 @@ import { AuthEffects } from './login/store/effects/auth.effects';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { SiteStatusComponent } from './home/site-status/site-status.component';
+import { TopRatedEateriesComponent } from './home/top-rated-eateries/top-rated-eateries.component';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzTypographyModule } from 'ng-zorro-antd/typography';
+import { OrderProcessingStepsComponent } from './home/order-processing-steps/order-processing-steps.component';
+import { AdvertiesmentDisplayComponent } from './home/advertisement-display/advertisement-display.component';
+import { NzCarouselModule } from 'ng-zorro-antd/carousel';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { HomePageFooterComponent } from './home/home-page-footer/home-page-footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
@@ -55,6 +65,10 @@ import { SiteStatusComponent } from './home/site-status/site-status.component';
     MealsCountComponent,
     DeliverAgentCountComponent,
     SiteStatusComponent,
+    TopRatedEateriesComponent,
+    OrderProcessingStepsComponent,
+    AdvertiesmentDisplayComponent,
+    HomePageFooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,8 +79,13 @@ import { SiteStatusComponent } from './home/site-status/site-status.component';
     NzCardModule,
     MatIconModule,
     FormsModule,
+    NzDividerModule,
+    NzTypographyModule,
     NgApexchartsModule,
-    CanvasJSAngularChartsModule,
+    SlickCarouselModule,
+    NzCarouselModule,
+    FontAwesomeModule,
+    // CanvasJSAngularChartsModule,
     MatProgressBarModule,
     ReactiveFormsModule,
     DropdownModule,

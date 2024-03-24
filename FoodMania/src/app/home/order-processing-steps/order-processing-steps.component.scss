@@ -1,0 +1,13 @@
+.order-processing-steps-frame{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-gap: 1px;
+    margin-left: 10px;
+}
+
+.how-it-enjoy-headline{
+    font-weight: 800;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+}

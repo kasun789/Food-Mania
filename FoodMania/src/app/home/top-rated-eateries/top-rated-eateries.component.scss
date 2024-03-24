@@ -1,0 +1,31 @@
+.top-rated-eateries-headline{
+    font-weight: 800;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+}
+.top-rated-eateries-grid{
+    display: grid;
+    grid-template-columns: repeat(3,34%);
+    grid-template-rows: repeat(2,50%);
+    grid-gap: 10px;
+    margin-left: 50px;
+    margin-top: 30px;
+
+    .icon-fish{
+        width: 70px;
+        height: 70px;
+        margin-left: 87px;
+    }
+    .info-btn{
+        background-color: black;
+        margin-left: 209px;
+    }
+    .eater-description{
+        text-align: center;
+    }
+    .order-now-btn{
+        background-color: black;
+        margin-left: 165px;
+    }
+}

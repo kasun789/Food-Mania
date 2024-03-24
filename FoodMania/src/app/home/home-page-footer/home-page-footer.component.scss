@@ -1,0 +1,62 @@
+.footer-frame{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-gap: 10px;
+    margin-left: 50px;
+
+    .site-description{
+        display: grid;
+        grid-template-rows: repeat(3,33%);
+
+        .site-name{
+            display: inline-flex;
+    
+            .logo-icon{
+                width: 40px;
+                height: 40px;
+            }
+            .site-title{
+                margin-top: 10px;
+                margin-left: 5px;
+                font-weight: 800;
+                font-size: 15px;
+            }
+        }
+    }
+   
+
+    .description{
+        margin-left: 10px;
+    }
+    .footer-links{
+        display: inline-flex;
+        margin-top: 10px;
+        margin-left: 5px;
+        gap: 20px;
+    }
+
+    .contact-details{
+        display: grid;
+        grid-template-rows: repeat(4,25%);
+        justify-content: center;
+
+        .phone-no{
+            display: inline-flex;
+            gap: 10px;
+
+            .detail{
+                font-weight: 800;
+                font-size: 15px;
+            }
+        }
+        .email-details{
+            display: inline-flex;
+            gap: 10px;
+
+            .detail{
+                font-weight: 800;
+                font-size: 15px;
+            }
+        }
+    }
+}
